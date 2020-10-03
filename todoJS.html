@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="addTask">
+            <input type="text" placeholder="add a task">
+            <button>Add</button>
+        </div>
+        <ol class="notCom">
+            <h3>Not completed</h3>
+            <!-- <li> Task
+                <button>done</button>
+                <button>delete</button>
+            </li> -->
+        </ol>
+        <ol class="Com">
+            <h3>Completed</h3>
+            <!-- <li> Task
+                <button>delete</button>
+            </li> -->
+        </ol>
+    </div>
+    <script>
+        const input = document.querySelector('input')
+        const btn = document.querySelector('.addTask > button')
+
+        btn.addEventListener('click', addList);
+        input.addEventListener('keyup', (e)=>{
+            (e.keyCode === 13 ? addList(e) : null);
+        })
+        //13은 엔터를 의미하는 키입력감지함수
+
+        function addList(e){
+            const notCom = document.querySelector('.notCom');
+            const com = document.querySelector('.Com');
+
+            const newLi = document.createElement('li')
+            const checkBtn = document.createElement('button')
+            const delBtn = document.createElement('button')
+
+            checkBtn.innerHTML = 'done'
+            delBtn.innerHTML = 'delete'
+        
+            if(input.value !== ''){
+                newLi.textContent = input.value;
+                input.value='';
+                notCom.appendChild(newLi)
+                //버튼넣기
+                newLi.appendChild(checkBtn)
+                newLi.appendChild(delBtn)
+            }
+
+            checkBtn.addEventListener('click',function(){
+                const parent = this.parentNode;
+                parent.remove();
+                com.appendChild(parent);
+                delBtn.style.display = 'none'
+            })
+
+            delBtn.addEventListener('click',function(){
+                const parent = this.parentNode;
+                parent.remove();
+            })
+        }
+
+
+    </script>
+</body>
+</html>

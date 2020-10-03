@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finish Task</title>
+    <link rel="" href="">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.0/firebase-database.js"></script>
+    <script src="finish_task.js"></script>
+</head>
+<body>
+    <div id="content_container">
+        <div id="finish_task_header">
+            <p>Finish Task</p>
+        </div>
+        <div id="task_input_container">
+            <input type="text" id="input_box" placeholder="Start A Task">
+            <input type="date" name="" id="input_date">
+            <button id="input_button" onclick="add_task();">
+            Enter Task<i class="xi-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Task todo -->
+        <p class="header">Task</p>
+        <div class="container">
+            <div class="task_container">
+                <div id="task_date">
+                    <p id="task_title" contenteditable="false">Task Title1</p>
+                    <p id="task_date" contenteditable="false">Task Date1</p>
+                </div>
+                <div id="task_tool">
+                    <button id="task_done_button" onclick="task_done();">
+                        <i class="xi-check"></i>
+                    </button>
+                    <button id="task_edit_button" onclick="task_edit();">
+                        <i class="xi-pen"></i>
+                    </button>
+                    <button id="task_delete_button" onclick="task_delete();">
+                        <i class="xi-trash"></i>
+                    </button>
+                </div>
+                <div id="task_date">
+                    <p id="task_title" contenteditable="false">Task Title1</p>
+                    <p id="task_date" contenteditable="false">Task Date1</p>
+                </div>
+                <div id="task_tool">
+                    <button id="task_done_button" onclick="task_done();">
+                        <i class="xi-check"></i>
+                    </button>
+                    <button id="task_edit_button" onclick="task_edit();">
+                        <i class="xi-pen"></i>
+                    </button>
+                    <button id="task_delete_button" onclick="task_delete();">
+                        <i class="xi-trash"></i>
+                    </button>
+                </div>
+                <div id="task_date">
+                    <p id="task_title" contenteditable="false">Task Title1</p>
+                    <p id="task_date" contenteditable="false">Task Date1</p>
+                </div>
+                <div id="task_tool">
+                    <button id="task_done_button" onclick="task_done();">
+                        <i class="xi-check"></i>
+                    </button>
+                    <button id="task_edit_button" onclick="task_edit();">
+                        <i class="xi-pen"></i>
+                    </button>
+                    <button id="task_delete_button" onclick="task_delete();">
+                        <i class="xi-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Task Finished -->
+        <p class="header">Finished</p>
+        <div class="container">
+            <div class="task_container">
+                <div id="task_date">
+                    <p id="task_title" contenteditable="false">Task Title1</p>
+                    <p id="task_date" contenteditable="false">Task Date1</p>
+                </div>
+                <div id="task_date">
+                    <p id="task_title" contenteditable="false">Task Title1</p>
+                    <p id="task_date" contenteditable="false">Task Date1</p>
+                </div>
+                <div id="task_date">
+                    <p id="task_title" contenteditable="false">Task Title1</p>
+                    <p id="task_date" contenteditable="false">Task Date1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
